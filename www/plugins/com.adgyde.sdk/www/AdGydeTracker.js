@@ -1,6 +1,6 @@
- /*************************************************************************
- *  File: AdgydeTracker.js
- *  Description: This file initiates calls to the native library from the plugin
+/*************************************************************************
+ *  File: AdGydeTracker.js
+ *  Description: AdGyde Tracker Javascript File
  *
  *  Copyright (c) 2019 - AdGyde Solutions Private Limited
  *  All Rights Reserved.
@@ -15,11 +15,6 @@
  *  permission is obtained from AdGyde Solutions Private Limited.
  *
  */
-
-
-cordova.define("com.adgyde.sdk.AdGydeTracker", 
-	function(require, exports, module) 
-	{
 
 		function cordovaExecCommand(command) 
 		{    
@@ -46,17 +41,17 @@ cordova.define("com.adgyde.sdk.AdGydeTracker",
 				args
 			);
 		}
+		
 		var AdGydeTracker = 
 		{
-			
 			getVersion: function (callback) 
 			{
 				cordovaExecCommandCallback('getVersion', callback);
 			},
 
-			initPAgent: function(appKeyString,channel)
+			initAdGyde: function(appKeyString)
 			{
-				cordovaExecCommand('initPAgent',appKeyString, channel);
+				cordovaExecCommand('initAdGyde',appKeyString, 'Organic');
 			},
 
 			setCurrentScreen: function(screenName)
@@ -84,12 +79,12 @@ cordova.define("com.adgyde.sdk.AdGydeTracker",
 				cordovaExecCommand('eventComputing', eventName, value);
 			},
 
-			eventDailyUnique: function(eventName, value,flag)
+			eventDailyUnique: function(eventName, value)
 			{
 				cordovaExecCommand('eventDailyUnique', eventName, value);
 			},
 
-			eventPermanentUnique: function(eventName, value, flag)
+			eventPermanentUnique: function(eventName, value)
 			{
 				cordovaExecCommand('eventPermanentUnique', eventName, value);
 			},
@@ -104,13 +99,35 @@ cordova.define("com.adgyde.sdk.AdGydeTracker",
 				cordovaExecCommand('eventRevenue', rev);
 			},
 
-			onFcmToken: function(token)
-			{
-				cordovaExecCommand('ontokenrefresh', token);
-			},
+			setAge: function(year, month, day)
+            {
+            	cordovaExecCommand('setAge', year, month, day);
+            },
 
+            setGender: function(gender)
+            {
+            	cordovaExecCommand('setGender', gender);
+            },
+
+            onFcmToken: function(token)
+            {
+                cordovaExecCommand('fcmToken',token)
+            },
+			  onAllowIMEI: function(bool)
+             {
+                 cordovaExecCommand('allowIMEI',bool)
+             },
+			  onGetDeeplink:function(success, error)
+             {
+               cordova.exec(success, error, "AdGydeTrackerPlugin", "onGetDeeplink", []);
+             },
+			  setUserId:function(userid)
+             {
+             cordovaExecCommand('setUserId',userid);
+             }
 		};
 
 		module.exports = AdGydeTracker;
-	}
-);
+	
+
+

@@ -16,18 +16,27 @@
  *
  */
 
-
-document.addEventListener("deviceready", 
+ 
+document.addEventListener("deviceready",
 	function()
 	{
-		// PAgent Initialise
+		// AdGyde Initialise
 		// Initialize AdGyde SDK with appkey & default channel id "Organic".
 		// When applictaion is installed from Google Play Store without any campaign the Channel will be Organic as specified in Init Function
 		// In case the applictaion is installed through a campaign link then the Default channel will be overriden and value from the campaign link will be passed.
-		AdGydeTracker.initPAgent("YOUR APP KEY","Organic");
-
+		// By Calling the below "AdGydeTracker.setCurrentScreen("Screen_Name");" you can able to add user flow and this user flow will reflect on AdGyde Dashboard.
+		AdGydeTracker.initAdGyde("Your_App_Key","Organic");
+			
+		// Custom User Flow		
+        AdGydeTracker.setCurrentScreen("Home_page");
+		
+		//Permission for Colllecting IMEI
+        AdGydeTracker.onAllowIMEI(true);
+		
 		// Fcm token method call
 		onFcmToken();
+
+
 	}
 );
 
@@ -46,6 +55,8 @@ function simpleEvent()
     AdGydeTracker.simpleEvent("Registration");
     window.plugins.toast.showShortBottom('Simple Event Triggered',
     function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+
+
 }
 
 
@@ -108,6 +119,9 @@ function onFcmToken()
 	//Note that this callback will be fired everytime a new token is generated, including the first time.
 	FCMPlugin.onTokenRefresh(
 		function(token){
+		//AdGydeTracker.onFcmToken(token);
+		window.plugins.toast.showShortBottom('tokenrefresh-----', function(a){console.log('Tokenn---Sucess ' + token)},
+        	function(b){alert('toast error: ' + token)});
 		}
 	);
 
@@ -116,8 +130,71 @@ function onFcmToken()
 	FCMPlugin.getToken(
 		function(token){
 			AdGydeTracker.onFcmToken(token);
-		}
+			window.plugins.toast.showShortBottom('getToken-----', function(a){console.log('Token Success: ' + token)},
+                    	function(b){alert('toast error: ' + token)});
+
+        }
 	);
+}
+
+/*
+ * Demography
+ * ==========
+ * AdGyde demography data provides details of Age and Gender wise segregation of Users.
+ * This data needs to be passed by Applictaion to show the same in the console
+ */
+
+/*
+ * Age data can be passed to SDK by following 2 functions which are shown in below code:-
+ *
+ * Both function are shown in below setUserAge();
+ * Put it as per you passed the value like Age wise or D.O.B wise.
+ *
+ * Syntax Type 1 :- AdGydeTracker.setAge( int years, int month, int day);
+ * Syntax Type 2 :- AdGydeTracker.setAge( int age);
+ *
+ */
+
+function setUserAge()
+{
+	AdGydeTracker.setAge(1991,05,05);
+
+ //AdGydeTracker.setAge(26);//Syntax Type 2
+}
+
+
+/* Gender value can be passed to the SDK using the below function.
+ * Only the below 3 Values can be passed to the function for Gender
+ * Male (M)
+ * Female (F)
+ * Others (O)
+ *
+ * Syntax :- AdGydeTracker.setGender(String gender);
+ *
+*/
+function setUserGender()
+{
+AdGydeTracker.setGender("M");
+}
+
+/* Get Deeplink Data 
+*/
+
+function getDlData()
+{
+   AdGydeTracker.onGetDeeplink(success, error);
+    function success(data){
+        alert(data);
+    }
+
+    function error(error){
+        alert(JSON.stringify(error));
+    }
+}
+
+function UserID()
+{
+ AdGydeTracker.setUserId("ADG1045984");
 }
 
 
@@ -158,6 +235,25 @@ document.getElementById("revenueEvent").onclick = function()
 	revenueEvent();
 }
 
+document.getElementById("userAge").onclick = function()
+{
+	setUserAge();
+}
+
+document.getElementById("userGender").onclick = function()
+{
+	setUserGender();
+}
+
+document.getElementById("getDlData").onclick = function()
+{
+	getDlData();
+}
+
+document.getElementById("setUserId").onclick = function()
+{
+UserID();
+}
 
 function change_page_counting()
 {

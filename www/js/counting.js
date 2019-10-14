@@ -17,6 +17,10 @@
  */
  
  
+ /* Custom User Flow
+  * ==================
+  *  By Calling the below "AdGydeTracker.setCurrentScreen("Screen_Name");" you can able to add user flow and this user flow will reflect on AdGyde Dashboard.
+  */
 document.addEventListener("deviceready", 
 	function()
 	{

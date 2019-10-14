@@ -7,10 +7,16 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-x-toast": {
+    "cordova-plugin-fcm-with-dependecy-updated": {
       "PACKAGE_NAME": "com.cordova.android.testAppp"
     },
-    "cordova-plugin-fcm": {
+    "cordova-plugin-firebase-lib": {
+      "PACKAGE_NAME": "com.cordova.android.testAppp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.cordova.android.testAppp"
+    },
+    "cordova-plugin-x-toast": {
       "PACKAGE_NAME": "com.cordova.android.testAppp"
     }
   },

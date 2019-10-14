@@ -1,6 +1,6 @@
 {
   "project_info": {
-    "project_number": "987654321091",
+    "project_number": "784628370712",
     "firebase_url": "https://examplecordova.firebaseio.com",
     "project_id": "examplecordova",
     "storage_bucket": "examplecordova.appspot.com"
@@ -8,28 +8,35 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:987654321091:android:7efc1650bca42532",
+        "mobilesdk_app_id": "1:784628370712:android:7efc1650acb42532",
         "android_client_info": {
           "package_name": "com.cordova.android.testAppp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "987654321091-9lbfb0jda9md558icekc1664folojt0r.apps.googleusercontent.com",
+          "client_id": "784628370712-9lbfb0jda9md558icekc1466folojt0r.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCNU9cEdXWDMvvMDCQGR9HMQQJqVFRTbVk"
+          "current_key": "AIzaSyCNU9cEdXWDQGR9HMQQJMvvMDCqVFRTbVk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "987654321091-9lbfb0jda9icekcmd5581466folojt0r.apps.googleusercontent.com",
+              "client_id": "784628370712-9lbfb0jda9md558icekc1466folojt0r.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "784628370712-tb6rivqi8hgk6mk5ojr1m6ptnbgl4lnd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cordova.android.testAppp"
+              }
             }
           ]
         }
