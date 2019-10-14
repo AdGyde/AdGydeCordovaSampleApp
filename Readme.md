@@ -9,7 +9,7 @@ In case you face any issue or need any kind of clarification / understanding, We
 
 AdGyde is a Mobile Application Attribution tool which helps application owners / marketers in better advertisement targeting and in optimizing the ad expenditure. 
 
-Attribution
+<b>Attribution</b><br>
 AdGyde through its attribution SDK can determine which channel / partner the app install was delivered through. Post install events, User Flow and how the application is being used is shown by AdGyde. This data can help advertiser / Application owner to specifically target user segments, find out best channel to improve upon ROI.
 
 To get started contact AdGyde support - support@adgyde.com
