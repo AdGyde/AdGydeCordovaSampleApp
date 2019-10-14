@@ -15,8 +15,8 @@ AdGyde through its attribution SDK can determine which channel / partner the app
 To get started contact AdGyde support - support@adgyde.com
 ---
 
-# Integration Process for AdGyde Cordova Android SDK `v4.0.3`
+# Integration Process for AdGyde Cordova Android SDK `v4.1.2`
 You can also access the complete documentation from below link as well
-https://www.adgyde.com/documents.php
+<a href="https://www.adgyde.com/documents.php?topic=Integration&platform=cordova"> Cordova Integration Documents </a> 
 
 **NOTE : AdGyde Currently only supports Android in Cordova**
