@@ -1,0 +1,22 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.cordova.android.testAppp"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.cordova.android.testAppp"
+    }
+  },
+  "dependent_plugins": {
+    "AdGydeCordovaSDK_4.1.5.1": {
+      "PACKAGE_NAME": "com.cordova.android.testAppp"
+    }
+  }
+}
