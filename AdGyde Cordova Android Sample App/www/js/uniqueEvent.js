@@ -25,7 +25,7 @@
 document.addEventListener("deviceready", 
 	function()
 	{
-		AdGydeTracker.setCurrentScreen("UniqueEvent Page");
+		AdGydeTracker.setCurrentScreen("UniqueEvent Page")
 	}
 );
 

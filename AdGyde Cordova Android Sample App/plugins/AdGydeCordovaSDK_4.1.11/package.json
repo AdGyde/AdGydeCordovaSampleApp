@@ -1,5 +1,5 @@
 {
-    "version": "4.1.5.1",
+    "version": "4.1.11",
     "name": "com.adgyde.sdk",
     "cordova_name": "AdGyde SDK Cordova Plugin",
     "description": "Cordova Plugin for AdGyde",

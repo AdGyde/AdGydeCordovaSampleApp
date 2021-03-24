@@ -8,7 +8,7 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <plugin name="AdGydeCordovaSDK_4.1.5.1" spec="1" />
+    <plugin name="AdGydeCordovaSDK_4.1.11" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />

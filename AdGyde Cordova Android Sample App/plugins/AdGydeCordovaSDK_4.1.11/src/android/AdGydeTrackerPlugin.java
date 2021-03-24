@@ -27,7 +27,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -82,6 +81,25 @@ public class AdGydeTrackerPlugin extends CordovaPlugin {
             callbackContext.success(getDeeplinking());
         }
 
+/*
+        if (callbackContext != null) {
+            callbackContext.success(getCampaignName());
+        }
+
+        if (callbackContext != null) {
+            callbackContext.success(getCampaignId());
+        }
+
+        if (callbackContext != null) {
+            callbackContext.success(getChannelName());
+        }
+
+        if (callbackContext != null) {
+            callbackContext.success(getchannelId());
+        }
+*/
+
+
         if (action == null || action.length() == 0 || args == null) {
             return false;
         }
@@ -94,6 +112,42 @@ public class AdGydeTrackerPlugin extends CordovaPlugin {
             }
             return true;
         }
+
+        if (action.equals("getUserId")) {
+            if (callbackContext != null) {
+                callbackContext.success(getUserId());
+            }
+            return true;
+        }
+
+        if (action.equals("getCamapignId")) {
+            if (callbackContext != null) {
+                callbackContext.success(getCampaignId());
+            }
+            return true;
+        }
+
+        if (action.equals("getChannelId")) {
+            if (callbackContext != null) {
+                callbackContext.success(getchannelId());
+            }
+            return true;
+        }
+
+        if (action.equals("getCampaignName")) {
+            if (callbackContext != null) {
+                callbackContext.success(getCampaignName());
+            }
+            return true;
+        }
+
+        if (action.equals("getChannelName")) {
+            if (callbackContext != null) {
+                callbackContext.success(getChannelName());
+            }
+            return true;
+        }
+
 
         // INIT AdGyde
         if (action.equals("initAdGyde") && args.length() == 2) {
@@ -209,7 +263,7 @@ public class AdGydeTrackerPlugin extends CordovaPlugin {
      */
     private String getVersion() {
         // Return Tracker.getVersion();
-        return "AdGyde SDK v4.1.5.1";
+        return "AdGyde SDK v4.1.11";
     }
 
     private boolean initAdGyde(final String appKey, final String channel) {
@@ -254,7 +308,6 @@ public class AdGydeTrackerPlugin extends CordovaPlugin {
     private boolean eventCounting(final String eventName, HashMap<String, String> value) {
         Log.i(LOGTAG, "eventCounting :" + eventName + " value " + value.toString());
         AdGyde.onCountingEvent(eventName, value);
-
         return true;
     }
 
@@ -324,18 +377,35 @@ public class AdGydeTrackerPlugin extends CordovaPlugin {
         return true;
     }
 
+    private String getCampaignName() {
+        return AdGyde.getCampaignName();
+    }
+
+    private int getCampaignId() {
+        return AdGyde.getCampaignId();
+    }
+
+    private String getChannelName() {
+        return AdGyde.getChanelName();
+    }
+
+    private int getchannelId() {
+        return AdGyde.getchannelId();
+    }
+
     private boolean setPhoneNumber(String phonenumber) {
-        Log.i(LOGTAG, "phonenumber :" + phonenumber);
         AdGyde.setPhoneno(context,phonenumber);
             return true;
     }
 
     private boolean setEmailId(String emailId) {
-        Log.i(LOGTAG, "emailId :" + emailId);
         AdGyde.setEmail(context,emailId);
         return true;
     }
 
+    private String getUserId() {
+        return AdGyde.getUserId();
+    }
 
     /**
      * Retrieve the string from the index in the array if it exists

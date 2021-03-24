@@ -24,7 +24,7 @@
 document.addEventListener("deviceready", 
 	function()
 	{
-		AdGydeTracker.setCurrentScreen("CountingEvent Page");
+		AdGydeTracker.setCurrentScreen("CountingEvent Page")
 	}
 );
 

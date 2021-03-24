@@ -24,8 +24,8 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="AdGydeCordovaSDK_4.1.5.1"
-    version="4.1.5.1">
+    id="AdGydeCordovaSDK_4.1.11"
+    version="4.1.11">
 
     <name>AdGyde Tracker</name>
     <description>AdGyde Tracker plugin for Cordova</description>
@@ -62,7 +62,7 @@
 		
 		
         <!-- Android plugin files and adgyde sdk -->
-		<source-file src="src/android/libs/adgyde-android-sdk-4.1.5.1.jar" target-dir="libs" />        
+		<source-file src="src/android/libs/adgyde-android-sdk-4.1.11.jar" target-dir="libs" />        
 		<source-file src="src/android/AdGydeTrackerPlugin.java" target-dir="src/com/adgyde/sdk" />
 	</platform>
     <!-- ios -->   

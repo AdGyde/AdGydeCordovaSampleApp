@@ -16,8 +16,6 @@
  *
  */
 
-cordova.define("AdGydeCordovaSDK_4.1.5.AdGydeTracker", function(require, exports, module) 
-{
 		function cordovaExecCommand(command) 
 		{    
 			var args = Array.prototype.slice.call(arguments, 1);
@@ -110,6 +108,11 @@ cordova.define("AdGydeCordovaSDK_4.1.5.AdGydeTracker", function(require, exports
             {
             	cordovaExecCommand('setGender', gender);
             },
+            
+             setUserId: function(userId)
+             {
+                 cordovaExecCommand('setUserId', userId);
+             },
 
             onFcmToken: function(token)
             {
@@ -123,21 +126,46 @@ cordova.define("AdGydeCordovaSDK_4.1.5.AdGydeTracker", function(require, exports
              {
                cordova.exec(success, error, "AdGydeTrackerPlugin", "onGetDeeplink", []);
              },
-			  setUserId:function(userid)
-             {
-             cordovaExecCommand('setUserId',userid);
-             },
 
-             setPhoneNumber:function(phoneNumber){
+			setPhoneNumber:function(phoneNumber)
+			{
              cordovaExecCommand('setPhoneNumber',phoneNumber);
              },
 
               setEmailId:function(emailId){
                cordovaExecCommand('setEmailId',emailId);
-               }
+               },
+			   
+             onGetUserId:function(callback)
+             {
+               cordovaExecCommandCallback('getUserId', callback);
+             },
+
+			onGetCampaignName:function(callback)
+             {
+               cordovaExecCommandCallback('getCampaignName', callback);
+             },
+			 
+			  onGetCampaignId:function(callback)
+             {
+               cordovaExecCommandCallback('getCamapignId', callback);
+             },
+			 
+			  onGetChannelId:function(callback)
+             {
+               cordovaExecCommandCallback('getChannelId', callback);
+             },
+			 
+			onGetChannelName:function(callback)
+             {
+               cordovaExecCommandCallback('getChannelName', callback);
+             }
 
 		};
 
 		module.exports = AdGydeTracker;
 	
-});
+
+
+
+

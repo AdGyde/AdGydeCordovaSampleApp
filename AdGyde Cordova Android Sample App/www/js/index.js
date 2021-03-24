@@ -194,9 +194,8 @@ function getDlData()
 
 function UserID()
 {
-	AdGydeTracker.setUserId("ADG1045984");
+ AdGydeTracker.setUserId("ADG1045984");
 }
-
 
 function setPhoneNumber()
 {

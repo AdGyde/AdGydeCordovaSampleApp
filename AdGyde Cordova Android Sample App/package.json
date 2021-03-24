@@ -13,7 +13,6 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "AdGydeCordovaSDK_4.1.5.1": "1",
     "cordova-android": "^8.1.0",
     "cordova-plugin-whitelist": "^1.3.3",
     "cordova-plugin-x-toast": "^2.7.2"
@@ -22,14 +21,13 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-x-toast": {},
-      "AdGydeCordovaSDK_4.1.5.1": {},
-      "com.adgyde.sdk": {}
+      "AdGydeCordovaSDK_4.1.11": {}
     },
     "platforms": [
       "android"
     ]
   },
   "devDependencies": {
-    "com.adgyde.sdk": "1"
+    "AdGydeCordovaSDK_4.1.11": "1"
   }
 }

@@ -15,7 +15,7 @@
     }
   },
   "dependent_plugins": {
-    "AdGydeCordovaSDK_4.1.5.1": {
+    "AdGydeCordovaSDK_4.1.11": {
       "PACKAGE_NAME": "com.cordova.android.testAppp"
     }
   }
