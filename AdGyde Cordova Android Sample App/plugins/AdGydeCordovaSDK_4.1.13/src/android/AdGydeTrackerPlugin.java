@@ -262,8 +262,8 @@ public class AdGydeTrackerPlugin extends CordovaPlugin {
      * @return The sdk version or an empty string if the tracker is not configured.
      */
     private String getVersion() {
-        // Return Tracker.getVersion();
-        return "AdGyde SDK v4.1.11";
+        //Return Tracker.getVersion();
+        return "AdGyde SDK v4.1.13";
     }
 
     private boolean initAdGyde(final String appKey, final String channel) {
@@ -393,9 +393,9 @@ public class AdGydeTrackerPlugin extends CordovaPlugin {
         return AdGyde.getchannelId();
     }
 
-    private boolean setPhoneNumber(String phonenumber) {
-        AdGyde.setPhoneno(context,phonenumber);
-            return true;
+    private boolean setPhoneNumber(String phoneNumber) {
+        AdGyde.setPhoneno(context,phoneNumber);
+         return true;
     }
 
     private boolean setEmailId(String emailId) {

@@ -207,6 +207,7 @@ function setEmailId()
 	AdGydeTracker.setEmailId("support@adgyde.com");
 }
 
+
 /*Function for calling the page*/
 function countingEventPage()
 {

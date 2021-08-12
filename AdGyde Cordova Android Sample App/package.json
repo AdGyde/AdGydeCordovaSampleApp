@@ -21,13 +21,13 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-x-toast": {},
-      "AdGydeCordovaSDK_4.1.11": {}
+      "AdGydeCordovaSDK_4.1.13": {}
     },
     "platforms": [
       "android"
     ]
   },
   "devDependencies": {
-    "AdGydeCordovaSDK_4.1.11": "1"
+    "AdGydeCordovaSDK_4.1.13": "1"
   }
 }

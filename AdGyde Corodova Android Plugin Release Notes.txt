@@ -5,6 +5,12 @@
 ============================================================================
 
 
+v4.1.13 - (4 August 2021)
+=======================
+1) Expose campaign related functions
+2) Minor bug fixes.
+
+
 v4.1.11 - (20th March 2021)
 =======================
 1) Support for S2S events added
